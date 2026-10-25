@@ -1,4 +1,4 @@
-# KRTube
+# BBTube
 
 A responsive, watch-only YouTube-style interface built with React 18, TypeScript, Vite, Tailwind CSS, React Router, TanStack Query, Zustand, and the YouTube IFrame Player API.
 
@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-KRTube runs in mock mode by default, so no API key is required for local development.
+BBTube runs in mock mode by default, so no API key is required for local development.
 
 ## Connect the YouTube Data API
 

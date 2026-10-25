@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+  body { margin: 0; min-width: 320px; min-height: 100vh; touch-action: pan-x pan-y; -webkit-text-size-adjust: 100%; }
+  iframe { touch-action: pan-x pan-y; }
+  button, a, input, select { outline-offset: 2px; }
+}
+
+@layer components {
+  .icon-button { @apply grid h-10 w-10 shrink-0 place-items-center rounded-full hover:bg-zinc-100 focus-visible:ring-2 focus-visible:ring-blue-500 dark:hover:bg-zinc-800; }
+  .icon-button svg { @apply h-5 w-5; }
+  .action-button { @apply inline-flex h-10 items-center gap-2 rounded-full bg-zinc-100 px-4 text-sm font-semibold hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700; }
+  .action-button svg { @apply h-5 w-5; }
+  .chips-row { @apply sticky top-16 z-30 flex h-14 items-center border-b border-zinc-100 bg-white/95 px-2 backdrop-blur dark:border-zinc-800 dark:bg-[#0f0f0f]/95; }
+  .chips-scroll { @apply flex min-w-0 flex-1 gap-3 overflow-x-auto px-2 scrollbar-none; }
+  .chip { @apply h-8 shrink-0 rounded-lg bg-zinc-100 px-3 text-sm font-semibold hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700; }
+  .chip-active { @apply bg-zinc-950 text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200; }
+  .chip-arrow { @apply hidden h-8 w-8 shrink-0 place-items-center rounded-full hover:bg-zinc-100 sm:grid dark:hover:bg-zinc-800; }
+  .chip-arrow svg { @apply h-5 w-5; }
+  .video-grid { @apply grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5; }
+}
+
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
